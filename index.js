@@ -8,9 +8,11 @@ app.get("/toggleLedStatus",(req,res)=>{
         ledStatus = "OFF";
     res.send("toggled");
 });
-
+  
 app.get("/led",(req,res) => {
     res.send(ledStatus);
 });
 
-app.listen(3333 || process.env.PORT);
+const PORT = process.env.PORT || 3333;
+
+app.listen(PORT);
