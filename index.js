@@ -13,4 +13,4 @@ app.get("/led",(req,res) => {
     res.send(ledStatus);
 });
 
-app.listen(3333);
+app.listen(3333 || process.env.PORT);
